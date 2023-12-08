@@ -15,8 +15,10 @@ public class ChatController {
     @Autowired
     private OpenAIService openAIService;
 
-    @PostMapping("/ask")
+    @PostMapping("/askChatGPT")
     public String askQuestion(@RequestBody String prompt) {
         return openAIService.queryChatGPT(prompt);
     }
+
+    
 }
